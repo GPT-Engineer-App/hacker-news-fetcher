@@ -30,7 +30,7 @@ const Index = () => {
 
   useEffect(() => {
     if (filter) {
-      setFilteredStories(stories.filter(story => story.title.toLowerCase().includes(filter.toLowerCase())));
+      setFilteredStories(stories.filter(story => story.title && story.title.toLowerCase().includes(filter.toLowerCase())));
     } else {
       setFilteredStories(stories);
     }
